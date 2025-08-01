@@ -611,7 +611,7 @@ nav ul li a:hover {
   color: var(--bg-footer);
 }
 
-.hire button {
+.hire-btn {
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -622,7 +622,7 @@ nav ul li a:hover {
   background-color: transparent;
 }
 
-.hire button:hover {
+.hire-btn:hover {
   background-color: var(--clr-orange);
   border: none;
   color: var(--bale-text);
@@ -806,7 +806,7 @@ nav ul li a:hover {
   top: -10px;
   left: 80%;
   font-size: 100px;
-  color: rgba(255, 255, 255, 0.24); 
+  color: rgba(255, 255, 255, 0.24);
   font-family: Georgia, serif;
   pointer-events: none;
   user-select: none;
@@ -965,9 +965,20 @@ nav ul li a:hover {
 /* 6666666 */
 
 .blog {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   background-color: var(--secondary-bg);
   color: var(--text-color);
   padding: 4rem 2rem;
+}
+
+.blog > div:first-of-type {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .blog h2 {
@@ -976,25 +987,12 @@ nav ul li a:hover {
   color: var(--text-color);
 }
 
-.blog > button {
-  background: none;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  margin-bottom: 2rem;
-  transition: background 0.3s ease;
-}
-
-.blog > button:hover {
-  background-color: var(--text-color);
-  color: var(--secondary-bg);
-}
 
 .blog__posts-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+   /* max-width: 10rem; */
 }
 
 .blog__post {
@@ -1137,7 +1135,7 @@ footer {
 
 .footer__mid-right {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
   flex: 1 1 400px;
   justify-content: space-between;
@@ -1148,6 +1146,18 @@ footer {
   padding: 0;
   margin: 0;
   min-width: 140px;
+  max-width: 30%;
+}
+
+
+.footer__mid-right ul li,
+.footer__mid-right ul li a {
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+  display: block;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .footer__list-Head {
@@ -1156,16 +1166,6 @@ footer {
   cursor: default;
   font-size: 1.1rem;
   margin-bottom: 1rem;
-}
-
-.footer__mid-right ul li,
-.footer__mid-right ul li a {
-  font-size: 1rem;
-  text-decoration: none;
-  margin-bottom: 0.6rem;
-  display: block;
-  cursor: pointer;
-  transition: color 0.3s ease;
 }
 
 .footer__mid-right ul li a {
@@ -1177,23 +1177,41 @@ footer {
   text-decoration: underline;
 }
 
-#getUpdatesForm label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--bg-tags);
-  cursor: pointer;
+.input-wrapper {
+  position: relative;
+  width: 100%;
 }
 
 #getUpdatesForm input {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.5rem 2.5rem 0.5rem 0.5rem;
   border-radius: 5px;
   border: none;
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
+
+.submit-btn {
+  position: absolute;
+  top: 60%;
+  right: 1px;
+  transform: translateY(-50%);
+  background-color: var(--orange);
+  border: none;
+  padding: 3.7px;
+  border-radius: 20%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
 
 .footer__end {
   border-top: 1px solid var(--bg-tags);
