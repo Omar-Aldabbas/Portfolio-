@@ -714,7 +714,6 @@ nav ul li a:hover {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-
 .portfolio__tags {
   display: flex;
   flex-wrap: wrap;
@@ -753,13 +752,12 @@ nav ul li a:hover {
   color: var(--bg-footer);
 }
 
-.portfolio__end button{
+.portfolio__end button {
   position: relative;
   top: 0;
   left: 0;
   max-width: 2rem;
   border: none;
-  
 }
 
 .portfolio__end p {
@@ -767,9 +765,7 @@ nav ul li a:hover {
   line-height: 1.6;
 }
 
-
 /*  added test */
-
 
 .testimonial {
   display: flex;
@@ -789,6 +785,7 @@ nav ul li a:hover {
 }
 
 .card {
+  position: relative;
   flex: 0 0 auto;
   width: 300px;
   background: rgba(255, 255, 255, 0.1);
@@ -798,7 +795,22 @@ nav ul li a:hover {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   color: #fff;
+  padding: 20px;
   transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "“";
+  position: absolute;
+  top: -10px;
+  left: 80%;
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.24); 
+  font-family: Georgia, serif;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
 }
 
 .card:hover {
@@ -850,7 +862,6 @@ nav ul li a:hover {
   font-weight: bold;
   color: var(--orange, #ffa500);
 }
-
 
 /* fifth section */
 
@@ -1113,10 +1124,8 @@ footer {
 }
 
 .social li img.bg-orange {
-  width: 32px;
-  height: 32px;
-  filter: brightness(0) saturate(100%) invert(67%) sepia(48%) saturate(363%)
-    hue-rotate(11deg) brightness(92%) contrast(92%);
+  width: 16px;
+  height: 16px;
   cursor: pointer;
   transition: filter 0.3s ease;
 }
@@ -1143,20 +1152,24 @@ footer {
 
 .footer__list-Head {
   font-weight: 700;
+  color: var(--orange);
+  cursor: default;
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  color: var(--orange);
 }
 
 .footer__mid-right ul li,
 .footer__mid-right ul li a {
-  font-size: 0.9rem;
-  color: var(--bg-tags);
+  font-size: 1rem;
   text-decoration: none;
   margin-bottom: 0.6rem;
   display: block;
   cursor: pointer;
   transition: color 0.3s ease;
+}
+
+.footer__mid-right ul li a {
+  color: var(--bale-text);
 }
 
 .footer__mid-right ul li a:hover {
