@@ -9,21 +9,25 @@
   <body>
     <header>
       <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Serviice</a></li>
-          <li class="wide-item">
-            <div class="icon">
-              <span></span>
-              <p class="hover-text">Implemented by <br />Omar Aldabbas</p>
-              <h4 class="hide-hover">MYAREA</h4>
-            </div>
-          </li>
-          <li><a href="">Resume</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+          <!-- <button class="menu-toggle" aria-label="Toggle Menu">☰</button> -->
+
+          <ul class="nav-list">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Service</a></li>
+            <li class="wide-item">
+              <div class="icon">
+                <span></span>
+                <p class="hover-text">Implemented by <br />Omar Aldabbas</p>
+                <h4 class="hide-hover">MYAREA</h4>
+              </div>
+            </li>
+            <li><a href="">Resume</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
       </nav>
 
       <div class="hero">
@@ -52,7 +56,9 @@
           </div>
         </div>
         <div class="hero__center">
-          <!-- <img src="./assests/images/young.png" alt="" class="young abs" /> -->
+          <!-- <div class="young-wrapper">
+            <img src="./assests/images/Man2.png" alt="" class="young abs" />
+          </div> -->
           <img src="./assests/images/Frame 68.png" alt="" class="frame abs" />
           <img src="/assests/images/Ellipse.png" alt="" class="eclipce" />
 
@@ -69,7 +75,7 @@
     </header>
     <section class="unique service">
       <div>
-        <h2><span>My</span>Services</h2>
+        <h2><span class="orange">My</span>Services</h2>
         <p>
           Passionate about building responsive, user-focused web applications
           using modern JavaScript. Dedicated to writing clean, efficient code
@@ -79,15 +85,36 @@
       <div class="service__container">
         <div class="service__element">
           <h3>Data Analysis</h3>
-          <img src="" alt="" /><button class="arrow element"></button>
+          <div class="img-wrap">
+            <img
+              src="./assests/images/Rectangle 1.png"
+              alt="EDA & more"
+              class="shadow"
+            />
+          </div>
+          <button class="arrow element">&#8594;</button>
         </div>
         <div class="service__element">
           <h3>Web Development</h3>
-          <img src="" alt="" /><button class="arrow element"></button>
+          <div class="img-wrap">
+            <img
+              src="./assests/images/Rectangle 2.png"
+              alt="Manly with Node and React"
+              class="shadow"
+            />
+          </div>
+          <button class="arrow element">&#8594;</button>
         </div>
         <div class="service__element">
           <h3>Basic Cloud (aws)</h3>
-          <img src="" alt="" /><button class="arrow element"></button>
+          <div class="img-wrap">
+            <img
+              src="./assests/images/Rectangle 3.png"
+              alt="Still Learning this"
+              class="shadow"
+            />
+          </div>
+          <button class="arrow element">&#8594;</button>
         </div>
       </div>
     </section>
@@ -451,5 +478,13 @@
         </p>
       </div>
     </footer>
+    <script>
+      const toggle = document.querySelector(".menu-toggle");
+      const navList = document.querySelector(".nav-list");
+
+      toggle.addEventListener("click", () => {
+        navList.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
