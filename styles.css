@@ -221,7 +221,6 @@ nav ul li a:hover {
   align-items: center;
   position: relative;
   max-height: 800px;
-  border: 1px solid red;
 }
 .frame {
   max-width: 65vw;
@@ -416,13 +415,12 @@ nav ul li a:hover {
 }
 
 .arrow-btn:hover {
-  background: darkorange;
+  background: var(--orange);
   transition: background 0.5s ease-in, transform 0.5s ease-in;
-
 }
 
 .arrow-btn:hover::after {
-  transform:  rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* second section */
@@ -518,14 +516,15 @@ nav ul li a:hover {
 
 .hire {
   background-color: var(--bg-tags);
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  /* flex-wrap: wrap; */
-  align-items: flex-start;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  align-items: center;
   /* justify-content: space-between; */
   padding: 6rem 3rem;
-  gap: 1rem;
-  min-height: 100vh;
+  /* gap: 1rem; */
+  /* min-height: 100vh; */
   color: var(--clr-text);
 }
 
@@ -538,7 +537,7 @@ nav ul li a:hover {
   width: clamp(250px, 35vw, 400px);
   height: auto;
   object-fit: cover;
-  display: block;
+  /* display: block; */
   position: relative;
   z-index: 3;
 }
@@ -561,9 +560,9 @@ nav ul li a:hover {
   animation: jiggle 1s infinite ease-in-out;
 }
 
-
 @keyframes jiggle {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1.05) translate(0px, 0px);
   }
   25% {
@@ -575,6 +574,10 @@ nav ul li a:hover {
   75% {
     transform: scale(1.05) translate(1px, -1px);
   }
+}
+
+.hire__info {
+    width: clamp(300px, 50vw, 450px);
 }
 
 .hire__info h2 {
@@ -595,6 +598,7 @@ nav ul li a:hover {
   flex-wrap: wrap;
   gap: 2.5rem;
   margin-bottom: 2rem;
+
 }
 
 .hire__info-container h3 {
@@ -610,20 +614,19 @@ nav ul li a:hover {
 
 .hire button {
   padding: 0.75rem 2rem;
-  background-color: var(--clr-orange);
-  color: #fff;
-  border: none;
   border-radius: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.6s ease, border 0.6s ease-in;
+  border: 2px solid black;
+  color: black;
+  background-color: transparent;
 }
 
 .hire button:hover {
-  /* background-color: var(--orange); */
-  border: 2px solid black;
-  color: black;
-  background: transparent;
+  background-color: var(--clr-orange);
+  border: none;
+  color: var(--bale-text);
 }
 
 /* forth section  */
@@ -728,8 +731,13 @@ nav ul li a:hover {
   font-size: 0.9rem;
   color: var(--bg-footer);
   border: 1px solid var(--bg-footer);
+  cursor: default;
 }
 
+.tag:hover {
+  transform: translateY(-4px);
+  transition: transform 0.5s ease;
+}
 .portfolio__end {
   background-color: var(--bg-light);
   border-radius: 1rem;
