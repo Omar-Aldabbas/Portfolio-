@@ -8,29 +8,54 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="desktop-nav">
         <div class="nav-container">
-          <!-- <button class="menu-toggle" aria-label="Toggle Menu">☰</button> -->
+          <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#journey">About</a></li>
+            <li><a href="#service">Service</a></li>
+          </ul>
+
+          <div class="wide-item">
+            <div class="icon">
+              <span></span>
+              <p class="hover-text">Implemented by <br />Omar Aldabbas</p>
+              <h4 class="hide-hover">MYAREA</h4>
+            </div>
+          </div>
 
           <ul class="nav-list">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Service</a></li>
-            <li class="wide-item">
-              <div class="icon">
-                <span></span>
-                <p class="hover-text">Implemented by <br />Omar Aldabbas</p>
-                <h4 class="hide-hover">MYAREA</h4>
-              </div>
-            </li>
-            <li><a href="">Resume</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="https://github.com/Omar-Aldabbas" target="_blank">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
 
-      <div class="hero">
+      <!-- Mobile Nav -->
+      <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+          <div class="mobile-item">
+            <span></span>
+            <h4>MYAREA</h4>
+          </div>
+          <div class="menu-toggle" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="mobile-menu">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#journey">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="https://github.com/Omar-Aldabbas">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="hero" id="home">
         <div class="hero__info-top">
           <span>Hello!</span>
           <h1>
@@ -73,7 +98,8 @@
         </div>
       </div>
     </header>
-    <section class="unique service">
+
+    <section class="unique service" id="service">
       <div>
         <h2><span class="orange">My</span>Services</h2>
         <p>
@@ -113,69 +139,71 @@
           <button class="arrow-btn"></button>
         </div>
       </div>
+      <img src="./assests/images/component.png" alt="flow freely" class="bg-component" />
+      <img src="./assests/images/component.png" alt="flow freely" class="bg-component" />
+      <img src="./assests/images/component.png" alt="flow freely" class="bg-component" />
+      <img src="./assests/images/component.png" alt="flow freely" class="bg-component" />
+      <img src="./assests/images/component.png" alt="flow freely" class="bg-component" />
+      <img src="./assests/images/component.png" alt="flow freely" class="bg-component" />
     </section>
 
-    <section class="journey">
+    <section class="journey" id="journey">
       <h2>My <span class="orange">Learning Journey</span></h2>
       <div class="journey__container">
-        <div class="journey__left">
-          <div class="journey__info">
-            <h3>Started with HTML & CSS</h3>
-            <p class="date">January 2024</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
-            </p>
-          </div>
-          <div class="journey__info">
-            <h3>Explored JavaScript Basics</h3>
-            <p class="date">March 2024</p>
-            <p>
-              Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem,
-              at interdum magna augue eget diam.
-            </p>
-          </div>
-          <div class="journey__info">
-            <h3>Built First Web Projects</h3>
-            <p class="date">May 2024</p>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur
-              et. Donec ullamcorper nulla non metus.
-            </p>
-          </div>
+        <div class="journey__item">
+          <h3>Started Learning Data Analysis</h3>
+          <p class="date">Late 2024 - Early 2025</p>
+          <p>
+            Began exploring data analysis, focusing on correlation and
+            foundational concepts.
+          </p>
         </div>
-
-        <!-- <div class="journey__mid">
-      <img src="./assests/images/column.png" alt="timeline divider" />
-    </div> -->
-
-        <div class="journey__right">
-          <div class="journey__info">
-            <h3>Responsive Design Principles</h3>
-            <p class="journey__info-more">
-              Maecenas sed diam eget risus varius blandit sit amet non magna.
-              Curabitur blandit tempus porttitor.
-            </p>
-          </div>
-          <div class="journey__info">
-            <h3>JavaScript Deep Dive</h3>
-            <p class="journey__info-more">
-              Aenean lacinia bibendum nulla sed consectetur. Integer posuere
-              erat a ante venenatis dapibus posuere velit.
-            </p>
-          </div>
-          <div class="journey__info">
-            <h3>Real-World Projects</h3>
-            <p class="journey__info-more">
-              Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo
-              risus, porta ac consectetur ac, vestibulum at eros.
-            </p>
-          </div>
+        <div class="journey__item">
+          <h3>Correlation One Internship</h3>
+          <p>
+            Received Honor Certification after internship involving real-world
+            data projects.
+          </p>
+        </div>
+        <div class="journey__item">
+          <h3>Datacamp Certifications</h3>
+          <p>
+            Earned SQL Associate and Data Analysis certificates, mastering
+            querying and data interpretation.
+          </p>
+        </div>
+        <div class="journey__item">
+          <h3>Alhusain Technical University MERN Internship</h3>
+          <p>
+            Completed full-stack internship, developed real projects with MERN
+            stack and earned certification.
+          </p>
+        </div>
+        <div class="journey__item">
+          <h3>JYIF Fullstack Training</h3>
+          <p>
+            Hands-on training on React and PHP Laravel, building responsive and
+            dynamic web applications.
+          </p>
+        </div>
+        <div class="journey__item">
+          <h3>YDEP Training Program</h3>
+          <p>
+            Real-world job experience; participated in collaborative development
+            projects.
+          </p>
+        </div>
+        <div class="journey__item">
+          <h3>Community Engagement</h3>
+          <p>
+            Active involvement in Tkiyet Um Ali, Injaz, and Ana Usharek civil
+            programs supporting social causes.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="hire">
+    <section class="hire" id="hire">
       <div class="hire__pic">
         <img src="./assests/images/hire-pic.png" alt="main " class="main-img" />
         <img
@@ -199,7 +227,7 @@
       </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="portfolio__head">
         <h2>Lets have a look at my <span class="orange">Portfolio</span></h2>
         <button class="hire-btn">github</button>
@@ -243,127 +271,158 @@
     </section>
 
     <section class="unique testimonial">
-      <h2>Testimonials That Speak to <span class="orange">My Results</span></h2>
+      <h2>
+        Testimonials That Speak to <span class="orange">My Results</span>
+      </h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue
-        interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+        Here’s what my clients and collaborators have to say about working with me and
+        the results I deliver.
       </p>
+    
       <div class="cards__container">
         <div class="card">
           <div class="card__head">
-            <img src="./assests/images/client.png" alt="client picture" />
-            <h4>AHmed Ahmed <span>client</span></h4>
+            <img src="./assests/images/client.png" class="clientPic"alt="Client picture of Ahmed Ahmed" />
+            <h4>
+              Ahmed Ahmed <span>Data Analyst</span>
+            </h4>
           </div>
-          <div class="starContainer">
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
+          <div class="starContainer" aria-label="Rating: 5 out of 5 stars" role="img">
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
             <p class="rank">5.0</p>
           </div>
+          <p class="testimonial-text">
+            Omar’s data insights transformed our decision-making process. His attention to detail and
+            ability to translate complex data into actionable recommendations were invaluable.
+          </p>
         </div>
+    
         <div class="card">
           <div class="card__head">
-            <img src="./assests/images/client.png" alt="client picture" />
-            <h4>AHmed Ahmed <span>client</span></h4>
+            <img src="./assests/images/client.png" class="clientPic"alt="Client picture of Sara Ali" />
+            <h4>
+              Sara Ali <span>Project Manager</span>
+            </h4>
           </div>
-          <div class="starContainer">
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <p class="rank">5.0</p>
+          <div class="starContainer" aria-label="Rating: 4.9 out of 5 stars" role="img">
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <p class="rank">4.9</p>
           </div>
+          <p class="testimonial-text">
+            Working with Omar was a pleasure. His full-stack expertise helped us deliver a smooth, scalable app
+            ahead of schedule.
+          </p>
         </div>
+    
         <div class="card">
           <div class="card__head">
-            <img src="./assests/images/client.png" alt="client picture" />
-            <h4>AHmed Ahmed <span>client</span></h4>
+            <img src="./assests/images/client.png" class="clientPic"alt="Client picture of Khaled Mansour" />
+            <h4>
+              Khaled Mansour <span>Startup Founder</span>
+            </h4>
           </div>
-          <div class="starContainer">
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
+          <div class="starContainer" aria-label="Rating: 5 out of 5 stars" role="img">
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
             <p class="rank">5.0</p>
           </div>
+          <p class="testimonial-text">
+            Omar’s creative solutions and dedication brought our product vision to life with impressive efficiency and quality.
+          </p>
         </div>
+    
         <div class="card">
           <div class="card__head">
-            <img src="./assests/images/client.png" alt="client picture" />
-            <h4>AHmed Ahmed <span>client</span></h4>
+            <img src="./assests/images/client.png" class="clientPic"alt="Client picture of Lina Habib" />
+            <h4>
+              Lina Habib <span>Marketing Specialist</span>
+            </h4>
           </div>
-          <div class="starContainer">
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <p class="rank">5.0</p>
+          <div class="starContainer" aria-label="Rating: 4.7 out of 5 stars" role="img">
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <p class="rank">4.7</p>
           </div>
+          <p class="testimonial-text">
+            His skill in integrating marketing insights with technical development was instrumental in launching our campaign platform.
+          </p>
         </div>
+    
         <div class="card">
           <div class="card__head">
-            <img src="./assests/images/client.png" alt="client picture" />
-            <h4>AHmed Ahmed <span>client</span></h4>
+            <img src="./assests/images/client.png" class="clientPic"alt="Client picture of Samir Saleh" />
+            <h4>
+              Samir Saleh <span>Team Lead</span>
+            </h4>
           </div>
-          <div class="starContainer">
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
+          <div class="starContainer" aria-label="Rating: 5 out of 5 stars" role="img">
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
             <p class="rank">5.0</p>
           </div>
+          <p class="testimonial-text">
+            A dedicated professional who always goes the extra mile. His code quality and problem-solving abilities are outstanding.
+          </p>
         </div>
+    
         <div class="card">
           <div class="card__head">
-            <img src="./assests/images/client.png" alt="client picture" />
-            <h4>AHmed Ahmed <span>client</span></h4>
+            <img src="./assests/images/client.png" class="clientPic"alt="Client picture of Rana Abbas" />
+            <h4>
+              Rana Abbas <span>UX Designer</span>
+            </h4>
           </div>
-          <div class="starContainer">
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <img src="./assests/images/Star.png" alt="star" />
-            <p class="rank">5.0</p>
+          <div class="starContainer" aria-label="Rating: 4.8 out of 5 stars" role="img">
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <img src="./assests/images/Star.png" alt="" aria-hidden="true" />
+            <p class="rank">4.8</p>
           </div>
+          <p class="testimonial-text">
+            Omar’s collaboration made the development process seamless and ensured the final product aligned perfectly with our design goals.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="contact">
+
+    <section class="contact" id="contact">
       <h2>
         Have an Awsome Project Idea? <span class="orange">Let’s Discuss</span>
       </h2>
-      <form id="contactForm" action="" method="post">
-        <label for="name">
-          <span><img src="./assests/images/email.png" alt="Name Icon" /></span>
-          Enter Your Name
-        </label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">
-          <span><img src="./assests/images/email.png" alt="Email Icon" /></span>
-          Enter Email Address
-        </label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">
-          <span
-            ><img src="./assests/images/email.png" alt="Message Icon"
-          /></span>
-          Your Message
-        </label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+      <div id="formContainer">
+          <form id="contactForm" action="" method="post">
+            <label for="name">Enter Your Name</label>
+            <input type="text" id="name" name="name" required />
+          
+            <label for="email">Enter Email Address</label>
+            <input type="email" id="email" name="email" required />
+          
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          
+            <button type="submit">Send Message</button>
+          </form>
+      </div>
 
       <div class="contact__flare">
         <span class="contact__flare-element">HTML</span>
@@ -373,59 +432,8 @@
         <span class="contact__flare-element">Git</span>
         <span class="contact__flare-element">React</span>
         <span class="contact__flare-element">Node.js</span>
-      </div>
-    </section>
-
-    <section class="blog">
-      <div>
-        <h2>From my <span class="orange">posts</span></h2>
-        <button class="hire-btn">See All</button>
-      </div>
-      <div class="blog__posts-container">
-        <div class="blog__post">
-          <div class="blog__post-head">
-            <img src="./assests/images/blog post3.png" alt="" />
-            <button></button>
-          </div>
-          <p class="tag">BY JS</p>
-          <ul>
-            <li>Name</li>
-            <li>Date</li>
-          </ul>
-          <p class="blog__text">
-            Design Unraveled: Behind the Scenes of UI/UX Magic
-          </p>
-        </div>
-
-        <div class="blog__post">
-          <div class="blog__post-head">
-            <img src="./assests/images/blog post1.png" alt="" />
-            <button></button>
-          </div>
-          <p class="tag">BY JS</p>
-          <ul>
-            <li>Name</li>
-            <li>Date</li>
-          </ul>
-          <p class="blog__text">
-            Design Unraveled: Behind the Scenes of UI/UX Magic
-          </p>
-        </div>
-
-        <div class="blog__post">
-          <div class="blog__post-head">
-            <img src="./assests/images/plog post2.png" alt="" />
-            <button></button>
-          </div>
-          <p class="tag">BY JS</p>
-          <ul>
-            <li>Name</li>
-            <li>Date</li>
-          </ul>
-          <p class="blog__text">
-            Design Unraveled: Behind the Scenes of UI/UX Magic
-          </p>
-        </div>
+        <span class="contact__flare-element">SQL</span>
+        <span class="contact__flare-element">NoSQL</span>
       </div>
     </section>
 
@@ -436,15 +444,15 @@
       </div>
       <div class="footer__mid">
         <div class="footer__mid-left">
-          <div class="icon">
+          <div class="ended">
             <span></span>
-            <p class="hover-text">Implemented by <br />Omar Aldabbas</p>
-            <h4 class="hide-hover">MYAREA</h4>
+            <h3 class="hide-hover">MYAREA</h4>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue
-            interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+            My imagination and passion for new things have always guided my
+            learning journey. Although I initially started in electrical
+            engineering, discovering the possibilities in programming ignited
+            the same spark that first drew me to engineering.
           </p>
           <ul class="social">
             <li>
@@ -523,13 +531,6 @@
         </p>
       </div>
     </footer>
-    <script>
-      const toggle = document.querySelector(".menu-toggle");
-      const navList = document.querySelector(".nav-list");
-
-      toggle.addEventListener("click", () => {
-        navList.classList.toggle("show");
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
