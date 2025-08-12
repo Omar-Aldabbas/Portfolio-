@@ -1,13 +1,14 @@
+const imageContainer = document.getElementById("imageContainer");
 const journeyItems = document.querySelectorAll(".journey__item");
-const container = document.querySelector('.unique.service');
-const components = [...container.querySelectorAll('.bg-component')];
+const container = document.querySelector(".unique.service");
+const components = [...container.querySelectorAll(".bg-component")];
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileNav = document.querySelector(".mobile-nav");
 
-const velocityRange = 0.5; 
+const velocityRange = 0.5;
 const attractionStrength = 0.1;
- 
+
 menuToggle.addEventListener("click", () => {
   menuToggle.classList.toggle("active");
   mobileMenu.classList.toggle("active");
@@ -26,12 +27,34 @@ function checkActive() {
   });
 }
 
-window.addEventListener("scroll", checkActive);
-// window.addEventListener("load", checkActive);
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
+    const targetID = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetID);
 
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
 
-const state = components.map(el => {
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      imageContainer.classList.add("active");
+    } else {
+      imageContainer.classList.remove("active");
+    }
+  },
+  {
+    root: null,
+    threshold: 0.5,
+  }
+);
+
+const state = components.map((el) => {
   const x = el.offsetLeft;
   const y = el.offsetTop;
 
@@ -43,7 +66,7 @@ const state = components.map(el => {
 
 let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
 
-window.addEventListener('mousemove', e => {
+window.addEventListener("mousemove", (e) => {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
 });
@@ -51,7 +74,7 @@ window.addEventListener('mousemove', e => {
 function animate() {
   const containerRect = container.getBoundingClientRect();
 
-  state.forEach(obj => {
+  state.forEach((obj) => {
     const compCenterX = containerRect.left + obj.x + obj.el.offsetWidth / 2;
     const compCenterY = containerRect.top + obj.y + obj.el.offsetHeight / 2;
 
@@ -72,8 +95,14 @@ function animate() {
     obj.y += obj.vy;
 
     const maxOffset = 200;
-    obj.x = Math.min(Math.max(obj.x, obj.baseX - maxOffset), obj.baseX + maxOffset);
-    obj.y = Math.min(Math.max(obj.y, obj.baseY - maxOffset), obj.baseY + maxOffset);
+    obj.x = Math.min(
+      Math.max(obj.x, obj.baseX - maxOffset),
+      obj.baseX + maxOffset
+    );
+    obj.y = Math.min(
+      Math.max(obj.y, obj.baseY - maxOffset),
+      obj.baseY + maxOffset
+    );
 
     const tx = obj.x - obj.baseX;
     const ty = obj.y - obj.baseY;
@@ -84,22 +113,7 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
+observer.observe(imageContainer);
+window.addEventListener("scroll", checkActive);
+// window.addEventListener("load", checkActive);
 animate();
-
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const targetID = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetID);
-
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-
-
-
-
